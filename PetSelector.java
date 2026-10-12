@@ -36,7 +36,7 @@ public class PetSelector {
                     }
                 }
             } else if (favColor.toLowerCase().equals("red")) {
-                if (name.toLowerCase().startsWith("a") == true && name.toLowerCase().startsWith("e") == true && name.toLowerCase().startsWith("i") == true && name.toLowerCase().startsWith("o") == true && name.toLowerCase().startsWith("u") == true) {
+                if (name.toLowerCase().startsWith("a") == true || name.toLowerCase().startsWith("e") == true || name.toLowerCase().startsWith("i") == true || name.toLowerCase().startsWith("o") == true || name.toLowerCase().startsWith("u") == true) {
                     pet = "porcupine";
                 } else {
                     pet = "panda";
