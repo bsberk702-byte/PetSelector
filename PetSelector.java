@@ -1,3 +1,6 @@
+// Benjamin Berkowitz 10/13/26
+// This program allows the user to input some answers to their favorite things and their name, and it will output a perfect pet based on certain criteria.
+
 import java.util.Scanner;
 public class PetSelector {
     public static void main(String[] arg) {
@@ -21,17 +24,17 @@ public class PetSelector {
                 if (favSeason.toLowerCase().equals("spring")) {
                     pet = "ostrich";
                 }
-                if (favSeason.toLowerCase().equals("summer") == false && favSeason.toLowerCase().equals("fall") == false && name.toLowerCase().startsWith("a") || name.toLowerCase().startsWith("e") || name.toLowerCase().startsWith("i") || name.toLowerCase().startsWith("o") || name.toLowerCase().startsWith("u")) {
-                    if(pet.equals("ostrich") == false){
+                if (!favSeason.toLowerCase().equals("summer") && !favSeason.toLowerCase().equals("fall") && (!name.toLowerCase().startsWith("a") && !name.toLowerCase().startsWith("e") && !name.toLowerCase().startsWith("i") && !name.toLowerCase().startsWith("o") && !name.toLowerCase().startsWith("u"))) {
+                    if(!pet.equals("ostrich")){
                         pet = "axolotl";
                     }
                 }
             } else if (favColor.toLowerCase().equals("green")){
-                if (favSeason.toLowerCase().equals("winter") && name.toLowerCase().startsWith("a") == false && name.toLowerCase().startsWith("e") == false && name.toLowerCase().startsWith("i") == false && name.toLowerCase().startsWith("o") == false && name.toLowerCase().startsWith("u") == false) {
+                if (favSeason.toLowerCase().equals("winter") && (!name.toLowerCase().startsWith("a") && !name.toLowerCase().startsWith("e") && !name.toLowerCase().startsWith("i") && !name.toLowerCase().startsWith("o") && !name.toLowerCase().startsWith("u"))) {
                     pet = "giraffe";
                 }
-                if (favSeason.toLowerCase().equals("fall") == false) {
-                    if (pet.equals("giraffe") == false) {
+                if (!favSeason.toLowerCase().equals("fall")) {
+                    if (!pet.equals("giraffe")) {
                         pet = "dog";
                     }
                 }
@@ -41,7 +44,14 @@ public class PetSelector {
                 } else {
                     pet = "panda";
                 }
-            } else if (pet == "") {
+            } 
+            if (favSeason.toLowerCase().equals("summer")) {
+                if (pet == "") {
+                    pet = "pony";
+                }
+            }
+            
+            if (pet == "") {
             pet = "rock";
             }
         } else {
